@@ -18,6 +18,12 @@ def get_name_and_age(person_id):
 
     return DATA[person_id]
 
+
+def save_data(file, person_data):
+    """Save person data to file"""
+    with open(file, "w"):
+        fw.write(person_data)
+
 if __name__ == "__main__":
     try:
         person = get_name_and_age(111)
