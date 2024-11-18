@@ -1,5 +1,7 @@
 """Get person data"""
 
+import pandas as pd
+
 DATA = {
     111: {
         "name": "Dan",
@@ -29,6 +31,13 @@ def save_data(file, person_data):
     with open(file, "w") as fw:
         fw.write(person_data)
 
+def read_csv_data(file) -> pd.DataFrame:
+    """return data from scv"""
+    return pd.read_csv(file)
+
+
+def login():
+    pass
 
 def read_data(file):
     """Return a list with all rows from file"""
